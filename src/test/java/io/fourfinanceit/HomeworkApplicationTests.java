@@ -1,4 +1,4 @@
-package io.4financeit;
+package io.fourfinanceit;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

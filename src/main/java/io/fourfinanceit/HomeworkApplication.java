@@ -1,4 +1,4 @@
-package io.4financeit;
+package io.fourfinanceit;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
