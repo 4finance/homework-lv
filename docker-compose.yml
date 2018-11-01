@@ -1,0 +1,9 @@
+version: '3'
+services:
+  4finance-homework:
+    build:
+      context: .
+    tty: true
+    container_name: 4finance-homework
+    ports:
+    - 8080:8080
