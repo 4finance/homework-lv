@@ -1,6 +1,5 @@
 package lv.finance.homework.model;
 
-import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.hibernate.annotations.OnDelete;
@@ -11,7 +10,6 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
-@Builder
 @EqualsAndHashCode(callSuper = true)
 
 @Entity
@@ -35,3 +33,4 @@ public class Rejection extends AuditModel {
 	@Column
 	private RejectionReason rejectionReason;
 }
+
