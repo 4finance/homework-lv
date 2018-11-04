@@ -13,7 +13,7 @@ import java.util.Date;
 @EqualsAndHashCode(callSuper = true)
 
 @Entity
-@Table(name = "risks")
+@Table(name = "rejections")
 public class Rejection extends AuditModel {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
