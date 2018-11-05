@@ -7,6 +7,7 @@ import org.hibernate.annotations.OnDeleteAction;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
@@ -27,6 +28,7 @@ public class Loan extends AuditModel {
 	private Date term;
 	@Column
 	private BigDecimal amount;
-	@Column
-	private BigDecimal interestFactor;
+
+	@OneToMany(mappedBy = "loan")
+	private List<LoanExtension> extensions;
 }
