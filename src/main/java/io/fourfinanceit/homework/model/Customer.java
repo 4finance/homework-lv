@@ -23,6 +23,6 @@ public class Customer extends AuditModel {
 	private List<Loan> loans;
 
 	@OneToMany(mappedBy = "customer")
-	private List<Rejection> risks;
+	private List<Risk> risks;
 }
 

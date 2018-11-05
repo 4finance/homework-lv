@@ -1,5 +1,7 @@
 package io.fourfinanceit.homework.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.hibernate.annotations.OnDelete;
@@ -10,11 +12,13 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
+@Builder
+@AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 
 @Entity
-@Table(name = "rejections")
-public class Rejection extends AuditModel {
+@Table(name = "risks")
+public class Risk extends AuditModel {
 	@Id
 	@GeneratedValue
 	private Long id;
