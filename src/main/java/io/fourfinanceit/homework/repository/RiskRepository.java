@@ -1,6 +1,6 @@
-package lv.finance.homework.repository;
+package io.fourfinanceit.homework.repository;
 
-import lv.finance.homework.model.Rejection;
+import io.fourfinanceit.homework.model.Rejection;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

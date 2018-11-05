@@ -1,4 +1,4 @@
-package lv.finance.homework.model;
+package io.fourfinanceit.homework.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;

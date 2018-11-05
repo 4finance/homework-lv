@@ -1,4 +1,4 @@
-package lv.finance.homework;
+package io.fourfinanceit.homework;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

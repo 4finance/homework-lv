@@ -1,6 +1,6 @@
-package lv.finance.homework.controller;
+package io.fourfinanceit.homework.controller;
 
-import lv.finance.homework.model.Loan;
+import io.fourfinanceit.homework.model.Loan;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

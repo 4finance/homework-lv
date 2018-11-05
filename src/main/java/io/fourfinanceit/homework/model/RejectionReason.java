@@ -1,4 +1,4 @@
-package lv.finance.homework.model;
+package io.fourfinanceit.homework.model;
 
 public enum RejectionReason {
 	MAX_AMOUNT,

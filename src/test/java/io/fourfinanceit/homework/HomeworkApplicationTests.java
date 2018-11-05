@@ -1,4 +1,4 @@
-package lv.finance.homework;
+package io.fourfinanceit.homework;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

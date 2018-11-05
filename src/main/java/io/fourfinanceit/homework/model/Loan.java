@@ -1,7 +1,6 @@
-package lv.finance.homework.model;
+package io.fourfinanceit.homework.model;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -13,8 +12,8 @@ import java.util.Date;
 @EqualsAndHashCode(callSuper = true)
 
 @Entity
-@Table(name = "rejections")
-public class Rejection extends AuditModel {
+@Table(name = "loans")
+public class Loan extends AuditModel {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
@@ -29,8 +28,5 @@ public class Rejection extends AuditModel {
 	@Column
 	private BigDecimal amount;
 	@Column
-	private String ip;
-	@Column
-	private RejectionReason rejectionReason;
+	private BigDecimal interestFactor;
 }
-

@@ -1,6 +1,6 @@
-package lv.finance.homework.repository;
+package io.fourfinanceit.homework.repository;
 
-import lv.finance.homework.model.Request;
+import io.fourfinanceit.homework.model.Request;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
