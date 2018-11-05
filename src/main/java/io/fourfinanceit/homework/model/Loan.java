@@ -15,7 +15,7 @@ import java.util.Date;
 @Table(name = "loans")
 public class Loan extends AuditModel {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue
 	private Long id;
 
 	@ManyToOne(fetch = FetchType.LAZY)

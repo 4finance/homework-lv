@@ -16,7 +16,7 @@ import java.util.Date;
 @Table(name = "rejections")
 public class Rejection extends AuditModel {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue
 	private Long id;
 
 	@ManyToOne(fetch = FetchType.LAZY)
