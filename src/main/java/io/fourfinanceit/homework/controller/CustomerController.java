@@ -1,9 +1,9 @@
 package io.fourfinanceit.homework.controller;
 
-import io.fourfinanceit.homework.controller.dto.CustomerDto;
-import io.fourfinanceit.homework.controller.dto.LoanDto;
-import io.fourfinanceit.homework.controller.dto.TermDto;
-import io.fourfinanceit.homework.model.Loan;
+import io.fourfinanceit.homework.model.dto.CustomerDto;
+import io.fourfinanceit.homework.model.dto.LoanDto;
+import io.fourfinanceit.homework.model.dto.TermDto;
+import io.fourfinanceit.homework.model.entity.Loan;
 import io.fourfinanceit.homework.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

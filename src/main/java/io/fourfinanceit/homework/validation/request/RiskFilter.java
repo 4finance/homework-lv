@@ -1,7 +1,7 @@
 package io.fourfinanceit.homework.validation.request;
 
-import io.fourfinanceit.homework.model.RejectionReason;
-import io.fourfinanceit.homework.model.Risk;
+import io.fourfinanceit.homework.model.entity.RejectionReason;
+import io.fourfinanceit.homework.model.entity.Risk;
 import io.fourfinanceit.homework.repository.RiskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 

@@ -1,4 +1,4 @@
-package io.fourfinanceit.homework.controller.dto;
+package io.fourfinanceit.homework.model.dto;
 
 import io.fourfinanceit.homework.config.Constants;
 import io.fourfinanceit.homework.validation.dto.InRange;

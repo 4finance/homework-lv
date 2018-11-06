@@ -1,4 +1,4 @@
-package io.fourfinanceit.homework.model;
+package io.fourfinanceit.homework.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

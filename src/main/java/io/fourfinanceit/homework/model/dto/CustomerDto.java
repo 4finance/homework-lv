@@ -1,4 +1,4 @@
-package io.fourfinanceit.homework.controller.dto;
+package io.fourfinanceit.homework.model.dto;
 
 import lombok.Data;
 

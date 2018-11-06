@@ -1,6 +1,6 @@
 package io.fourfinanceit.homework.validation.request;
 
-import io.fourfinanceit.homework.model.RejectionReason;
+import io.fourfinanceit.homework.model.entity.RejectionReason;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

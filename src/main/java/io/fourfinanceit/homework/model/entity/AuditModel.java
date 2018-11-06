@@ -1,4 +1,4 @@
-package io.fourfinanceit.homework.model;
+package io.fourfinanceit.homework.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;

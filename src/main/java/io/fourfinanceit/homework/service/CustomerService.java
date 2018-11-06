@@ -1,9 +1,9 @@
 package io.fourfinanceit.homework.service;
 
-import io.fourfinanceit.homework.controller.dto.CustomerDto;
-import io.fourfinanceit.homework.controller.dto.LoanDto;
-import io.fourfinanceit.homework.controller.dto.TermDto;
-import io.fourfinanceit.homework.model.Loan;
+import io.fourfinanceit.homework.model.dto.CustomerDto;
+import io.fourfinanceit.homework.model.dto.LoanDto;
+import io.fourfinanceit.homework.model.dto.TermDto;
+import io.fourfinanceit.homework.model.entity.Loan;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
