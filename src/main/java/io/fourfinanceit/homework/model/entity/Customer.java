@@ -6,13 +6,15 @@ import javax.persistence.*;
 import java.util.List;
 
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 
 @Entity
 @Table(name = "customers")
 public class Customer extends AuditModel {
 	@Id
-	@GeneratedValue
 	private Long id;
 	@Column
 	private String name;

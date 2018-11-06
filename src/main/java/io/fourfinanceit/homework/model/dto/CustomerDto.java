@@ -9,6 +9,9 @@ import javax.validation.constraints.NotNull;
 public class CustomerDto {
 
 	@NotNull
+	private Long id;
+
+	@NotNull
 	@NotEmpty
 	private String name;
 

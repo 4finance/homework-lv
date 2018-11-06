@@ -31,18 +31,18 @@ public class CustomerController {
 	}
 
 	@GetMapping("customers/{customerId}/loans")
-	public List<Loan> getCustomerLoans(@PathVariable("customerId") String customerId) {
+	public List<Loan> getCustomerLoans(@PathVariable("customerId") Long customerId) {
 		return service.findLoans(customerId);
 	}
 
 	@PostMapping("customers/{customerId}/loan")
-	public ResponseEntity<?> createLoan(@PathVariable(name = "customerId") String customerId, @Valid @RequestBody LoanDto loan) {
+	public ResponseEntity<?> createLoan(@PathVariable(name = "customerId") Long customerId, @Valid @RequestBody LoanDto loan) {
 		service.createLoan(customerId, loan);
 		return ResponseEntity.status(HttpStatus.CREATED).build();
 	}
 
 	@PostMapping("customers/{customerId}/loans/{loanId}/extend")
-	public ResponseEntity<?> extendLoan(@PathVariable("customerId") String customerId, @PathVariable("loanId") String loanId, @Valid @RequestBody TermDto term) {
+	public ResponseEntity<?> extendLoan(@PathVariable("customerId") Long customerId, @PathVariable("loanId") Long loanId, @Valid @RequestBody TermDto term) {
 		service.extendLoan(customerId, loanId, term);
 		return ResponseEntity.status(HttpStatus.CREATED).build();
 	}
