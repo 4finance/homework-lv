@@ -1,5 +1,6 @@
 package io.fourfinanceit.homework.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -22,6 +23,7 @@ public class Loan extends AuditModel {
 	@GeneratedValue
 	private Long id;
 
+	@JsonIgnore
 	@ManyToOne(fetch = FetchType.LAZY)
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	@JoinColumn(name = "customer_id")
