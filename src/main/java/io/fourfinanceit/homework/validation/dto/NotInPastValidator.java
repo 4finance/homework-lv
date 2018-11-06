@@ -4,7 +4,7 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import java.util.Date;
 
-public class DateValidator implements ConstraintValidator<NotInPast, Date> {
+public class NotInPastValidator implements ConstraintValidator<NotInPast, Date> {
 
 	@Override
 	public void initialize(NotInPast constraintAnnotation) {

@@ -7,7 +7,7 @@ import java.lang.annotation.*;
 @Target({ElementType.METHOD, ElementType.FIELD, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Constraint(validatedBy = {DateValidator.class})
+@Constraint(validatedBy = {NotInPastValidator.class})
 public @interface NotInPast {
 	String message() default "Date set in past";
 
