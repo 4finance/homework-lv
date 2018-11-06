@@ -40,5 +40,4 @@ public class HomeworkApplication {
 		registrationBean.setOrder(Ordered.LOWEST_PRECEDENCE);
 		return registrationBean;
 	}
-
 }
