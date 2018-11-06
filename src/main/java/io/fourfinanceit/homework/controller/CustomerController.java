@@ -1,29 +1,49 @@
 package io.fourfinanceit.homework.controller;
 
+import io.fourfinanceit.homework.controller.dto.CustomerDto;
+import io.fourfinanceit.homework.controller.dto.LoanDto;
+import io.fourfinanceit.homework.controller.dto.TermDto;
+import io.fourfinanceit.homework.model.Loan;
+import io.fourfinanceit.homework.service.CustomerService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("api")
 public class CustomerController {
 
-	@PostMapping("customer")
-	public ResponseEntity<?> createCustomer() {
-		return ResponseEntity.badRequest().build();
-	}
+    private final CustomerService service;
 
-	@GetMapping("customers/{customerId}/loans")
-	public ResponseEntity<?> getCustomerLoans(@PathVariable("customerId") String customerId) {
-		return ResponseEntity.badRequest().build();
-	}
+    @Autowired
+    public CustomerController(CustomerService service) {
+        this.service = service;
+    }
 
-	@PostMapping("customers/{customerId}/loan")
-	public ResponseEntity<?> createLoan(@PathVariable("customerId") String customerId) {
-		return ResponseEntity.badRequest().build();
-	}
+    @PostMapping("customer")
+    public ResponseEntity<?> createCustomer(@Valid @RequestBody CustomerDto customer) {
+        service.createCustomer(customer);
+        return ResponseEntity.ok().build();
+    }
 
-	@PostMapping("customers/{customerId}/loans/{loanId}/extend")
-	public ResponseEntity<?> extendLoan(@PathVariable("customerId") String customerId, @PathVariable("loanId") String loanId) {
-		return ResponseEntity.badRequest().build();
-	}
+    @GetMapping("customers/{customerId}/loans")
+    public List<Loan> getCustomerLoans(@PathVariable("customerId") String customerId) {
+        return service.findLoans(customerId);
+    }
+
+    @PostMapping("customers/{customerId}/loan")
+    public ResponseEntity<?> createLoan(@PathVariable(name = "customerId") String customerId, @Valid @RequestBody LoanDto loan) {
+        service.createLoan(customerId, loan);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+
+    @PostMapping("customers/{customerId}/loans/{loanId}/extend")
+    public ResponseEntity<?> extendLoan(@PathVariable("customerId") String customerId, @PathVariable("loanId") String loanId, @Valid @RequestBody TermDto term) {
+        service.extendLoan(customerId, loanId, term);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
 }
