@@ -7,10 +7,12 @@ import javax.validation.constraints.NotNull;
 
 @Data
 public class CustomerDto {
-    @NotNull
-    @NotEmpty
-    private String name;
-    @NotNull
-    @NotEmpty
-    private String surname;
+
+	@NotNull
+	@NotEmpty
+	private String name;
+
+	@NotNull
+	@NotEmpty
+	private String surname;
 }

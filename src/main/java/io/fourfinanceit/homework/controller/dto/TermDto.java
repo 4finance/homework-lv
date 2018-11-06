@@ -8,7 +8,8 @@ import java.util.Date;
 
 @Data
 public class TermDto {
-    @NotNull
-    @NotInPast
-    private Date term;
+
+	@NotNull
+	@NotInPast
+	private Date term;
 }

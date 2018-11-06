@@ -20,7 +20,7 @@ public class HomeworkApplication {
 	}
 
 	@Bean
-	@Scope(value="singleton")
+	@Scope(value = "singleton")
 	public IpValidator ipValidator() {
 		return new IpValidator();
 	}

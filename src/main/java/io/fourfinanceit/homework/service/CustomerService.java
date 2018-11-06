@@ -10,19 +10,19 @@ import java.util.List;
 
 @Service
 public class CustomerService {
-    public void createCustomer(CustomerDto customer) {
+	public void createCustomer(CustomerDto customer) {
 
-    }
+	}
 
-    public List<Loan> findLoans(String customerId) {
-        return null;
-    }
+	public List<Loan> findLoans(String customerId) {
+		return null;
+	}
 
-    public void createLoan(String customerId, LoanDto loan) {
+	public void createLoan(String customerId, LoanDto loan) {
 
-    }
+	}
 
-    public void extendLoan(String customerId, String loanId, TermDto term) {
+	public void extendLoan(String customerId, String loanId, TermDto term) {
 
-    }
+	}
 }

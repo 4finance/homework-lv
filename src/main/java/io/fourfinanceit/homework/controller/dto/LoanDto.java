@@ -11,10 +11,12 @@ import java.util.Date;
 
 @Data
 public class LoanDto {
-    @NotNull
-    @InRange(min = 0, max = Constants.MAX_LOAN_AMOUNT)
-    private BigDecimal amount;
-    @NotNull
-    @NotInPast
-    private Date term;
+
+	@NotNull
+	@InRange(min = 0, max = Constants.MAX_LOAN_AMOUNT)
+	private BigDecimal amount;
+
+	@NotNull
+	@NotInPast
+	private Date term;
 }
