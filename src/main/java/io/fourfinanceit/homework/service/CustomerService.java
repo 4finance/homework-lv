@@ -53,9 +53,9 @@ public class CustomerService {
 		Customer customer = findCustomer(customerId);
 		List<Loan> loans = customer.getLoans();
 		Loan extendedLoan = loans.stream()
-		                         .filter(loan -> loan.getId().equals(loanId))
-		                         .findFirst()
-		                         .orElseThrow(() -> new ResourceNotFoundException("Loan is not found"));
+				.filter(loan -> loan.getId().equals(loanId))
+				.findFirst()
+				.orElseThrow(() -> new ResourceNotFoundException("Loan is not found"));
 		extensionService.extendLoan(extendedLoan, dto.getTerm());
 	}
 
