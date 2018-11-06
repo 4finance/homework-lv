@@ -1,5 +1,6 @@
 package io.fourfinanceit.homework.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,12 +23,6 @@ public class Risk extends AuditModel {
 	@Id
 	@GeneratedValue
 	private Long id;
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@OnDelete(action = OnDeleteAction.CASCADE)
-	@JoinColumn(name = "customer_id")
-	private Customer customer;
-
 	@Column
 	private Date term;
 	@Column
@@ -35,6 +30,13 @@ public class Risk extends AuditModel {
 	@Column
 	private String ip;
 	@Column
+	@Enumerated(EnumType.STRING)
 	private RejectionReason rejectionReason;
+
+	@JsonIgnore
+	@ManyToOne(fetch = FetchType.LAZY)
+	@OnDelete(action = OnDeleteAction.CASCADE)
+	@JoinColumn(name = "customer_id")
+	private Customer customer;
 }
 
