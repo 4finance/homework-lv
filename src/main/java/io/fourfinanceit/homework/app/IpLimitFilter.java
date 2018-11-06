@@ -30,13 +30,17 @@ public class IpLimitFilter extends RiskFilter implements Filter {
 		String ipAddress = request.getRemoteAddr();
 
 		if (ipValidator.isIpAddressReachedLimit(ipAddress)) {
-			logger.info("Request aborted");
-			HttpServletResponse resp = (HttpServletResponse) servletResponse;
-			resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-			registerRisk();
+			blockRequest(servletResponse, ipAddress);
 		} else {
 			filterChain.doFilter(servletRequest, servletResponse);
 		}
+	}
+
+	private void blockRequest(ServletResponse servletResponse, String ipAddress) {
+		logger.info(String.format("Request aborted for IP : %s", ipAddress));
+		HttpServletResponse response = (HttpServletResponse) servletResponse;
+		response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+		registerRisk();
 	}
 
 	@Override
