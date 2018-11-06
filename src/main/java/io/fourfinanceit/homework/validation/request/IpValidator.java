@@ -3,17 +3,19 @@ package io.fourfinanceit.homework.validation.request;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static io.fourfinanceit.homework.config.Constants.MAX_REQUESTS_PER_DAY;
+
 public class IpValidator {
-	private static final int MAX_REQUESTS_PER_DAY = 3;
 
 	private Map<String, Long> ipAttempts = new ConcurrentHashMap<>();
 
-
-	public synchronized void registerIpAddressAttempt(String ip) {
-		//TODO implement ip registration logic
+	synchronized void registerIpAddressAttempt(String ip) {
+		Long attempt = ipAttempts.putIfAbsent(ip, 0L);
+		attempt += 1;
+		ipAttempts.put(ip, attempt);
 	}
 
-	public synchronized boolean isIpAddressReachedLimit(String ip) {
+	synchronized boolean isIpAddressReachedLimit(String ip) {
 		Long attempt = ipAttempts.get(ip);
 		return attempt != null && attempt >= MAX_REQUESTS_PER_DAY;
 	}

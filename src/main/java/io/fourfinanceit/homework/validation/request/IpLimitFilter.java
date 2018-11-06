@@ -26,12 +26,12 @@ public class IpLimitFilter extends RiskFilter implements Filter {
 	@Override
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 		HttpServletRequest request = (HttpServletRequest) servletRequest;
-
 		String ipAddress = request.getRemoteAddr();
 
 		if (ipValidator.isIpAddressReachedLimit(ipAddress)) {
 			blockRequest(servletResponse, ipAddress);
 		} else {
+			ipValidator.registerIpAddressAttempt(ipAddress);
 			filterChain.doFilter(servletRequest, servletResponse);
 		}
 	}
