@@ -17,6 +17,8 @@ public class InRangeValidator implements ConstraintValidator<InRange, BigDecimal
 
 	@Override
 	public boolean isValid(BigDecimal value, ConstraintValidatorContext context) {
-		return value != null && (value.compareTo(BigDecimal.valueOf(min)) > 0 && value.compareTo(BigDecimal.valueOf(max)) <= 0);
+		return value != null
+				&& (value.compareTo(BigDecimal.valueOf(min)) > 0
+				&& value.compareTo(BigDecimal.valueOf(max)) <= 0);
 	}
 }
