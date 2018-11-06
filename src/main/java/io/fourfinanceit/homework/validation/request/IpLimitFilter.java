@@ -1,4 +1,4 @@
-package io.fourfinanceit.homework.app;
+package io.fourfinanceit.homework.validation.request;
 
 import io.fourfinanceit.homework.model.RejectionReason;
 import org.slf4j.Logger;

@@ -1,4 +1,4 @@
-package io.fourfinanceit.homework.validation;
+package io.fourfinanceit.homework.validation.dto;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

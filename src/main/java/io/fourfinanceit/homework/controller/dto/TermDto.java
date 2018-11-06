@@ -1,6 +1,6 @@
 package io.fourfinanceit.homework.controller.dto;
 
-import io.fourfinanceit.homework.validation.NotInPast;
+import io.fourfinanceit.homework.validation.dto.NotInPast;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;

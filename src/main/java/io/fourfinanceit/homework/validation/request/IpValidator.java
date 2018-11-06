@@ -1,4 +1,4 @@
-package io.fourfinanceit.homework.app;
+package io.fourfinanceit.homework.validation.request;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

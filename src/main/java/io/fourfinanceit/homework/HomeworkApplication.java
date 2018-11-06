@@ -1,7 +1,7 @@
 package io.fourfinanceit.homework;
 
-import io.fourfinanceit.homework.app.IpLimitFilter;
-import io.fourfinanceit.homework.app.IpValidator;
+import io.fourfinanceit.homework.validation.request.IpLimitFilter;
+import io.fourfinanceit.homework.validation.request.IpValidator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
