@@ -1,4 +1,4 @@
-package io.fourfinanceit.homework.validation;
+package io.fourfinanceit.homework.validation.filter;
 
 import io.fourfinanceit.homework.validation.filter.IpFilter;
 import io.fourfinanceit.homework.validation.filter.IpValidator;
