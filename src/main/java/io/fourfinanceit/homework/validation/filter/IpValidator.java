@@ -1,4 +1,4 @@
-package io.fourfinanceit.homework.validation.request;
+package io.fourfinanceit.homework.validation.filter;
 
 import java.util.Map;
 import java.util.Optional;
