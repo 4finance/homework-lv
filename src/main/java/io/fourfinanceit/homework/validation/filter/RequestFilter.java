@@ -1,7 +1,5 @@
 package io.fourfinanceit.homework.validation.filter;
 
-import io.fourfinanceit.homework.validation.filter.IpFilter;
-import io.fourfinanceit.homework.validation.filter.IpValidator;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Scope;
