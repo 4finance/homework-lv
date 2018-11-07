@@ -6,6 +6,7 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
@@ -30,4 +31,7 @@ public class LoanExtension extends AuditModel {
 
 	@Column
 	private LocalDateTime term;
+
+	@Column
+	private BigDecimal amount;
 }
