@@ -6,7 +6,7 @@ import io.fourfinanceit.homework.repository.ExtensionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Service
 public class LoanExtensionService {
@@ -18,7 +18,7 @@ public class LoanExtensionService {
 		this.extensionRepository = extensionRepository;
 	}
 
-	public void extendLoan(Loan loan, Date term) {
+	public void extendLoan(Loan loan, LocalDateTime term) {
 		LoanExtension extension = LoanExtension.builder().loan(loan).term(term).build();
 		extensionRepository.saveAndFlush(extension);
 	}

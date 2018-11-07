@@ -7,7 +7,7 @@ import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Data
 public class LoanDto {
@@ -18,5 +18,5 @@ public class LoanDto {
 
 	@NotNull
 	@NotInPast
-	private Date term;
+	private LocalDateTime term;
 }

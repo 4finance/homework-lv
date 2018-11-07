@@ -10,7 +10,7 @@ import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Data
 @Builder
@@ -24,7 +24,7 @@ public class Risk extends AuditModel {
 	@GeneratedValue
 	private Long id;
 	@Column
-	private Date term;
+	private LocalDateTime term;
 	@Column
 	private BigDecimal amount;
 	@Column
