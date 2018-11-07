@@ -1,4 +1,4 @@
-package io.fourfinanceit.homework.schedule;
+package io.fourfinanceit.homework.scheduler;
 
 import io.fourfinanceit.homework.validation.filter.IpValidator;
 import org.springframework.beans.factory.annotation.Autowired;
