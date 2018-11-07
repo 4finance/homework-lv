@@ -1,6 +1,5 @@
 package io.fourfinanceit.homework.validation.filter;
 
-import io.fourfinanceit.homework.model.entity.RejectionReason;
 import io.fourfinanceit.homework.model.entity.Risk;
 import io.fourfinanceit.homework.repository.RiskRepository;
 import org.slf4j.Logger;
@@ -57,7 +56,7 @@ public class IpFilter implements Filter {
 	}
 
 	private void registerRisk(String ip) {
-		Risk risk = Risk.builder().rejectionReason(RejectionReason.MAX_APPLICATIONS_PER_DAY).ip(ip).build();
+		Risk risk = new Risk(ip);
 		riskRepository.save(risk);
 	}
 
