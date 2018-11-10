@@ -9,7 +9,7 @@ import java.sql.Timestamp;
 public class ClientDO {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "NAME")
@@ -23,6 +23,13 @@ public class ClientDO {
 
     @Column(name = "CREATED")
     private Timestamp created;
+
+    public ClientDO() {
+    }
+
+    public ClientDO(Long clientId) {
+        this.id = clientId;
+    }
 
     public Long getId() {
         return id;

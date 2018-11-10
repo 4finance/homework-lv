@@ -8,7 +8,7 @@ import java.util.Date;
 public class LoanExtensionRequestDO {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
@@ -25,10 +25,7 @@ public class LoanExtensionRequestDO {
     @Column(name = "CREATED")
     private Date created;
 
-    @Column(name = "REQUESTED_SUM")
-    private Float requestedSum;
-
-    @Column(name = "REQUESTED_PERIOD")
+    @Column(name = "DURATION")
     private Integer duration;
 
     public Long getId() {
@@ -69,14 +66,6 @@ public class LoanExtensionRequestDO {
 
     public void setCreated(Date created) {
         this.created = created;
-    }
-
-    public Float getRequestedSum() {
-        return requestedSum;
-    }
-
-    public void setRequestedSum(Float requestedSum) {
-        this.requestedSum = requestedSum;
     }
 
     public Integer getDuration() {

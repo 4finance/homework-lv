@@ -8,12 +8,12 @@ import java.util.Date;
 public class LoanDO {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
     @JoinColumn(name = "CLIENT_ID")
-    private ClientDO clientDO;
+    private ClientDO client;
 
     @Column(name = "LOAN_SUM")
     private Float loanSum;
@@ -38,12 +38,12 @@ public class LoanDO {
         this.id = id;
     }
 
-    public ClientDO getClientDO() {
-        return clientDO;
+    public ClientDO getClient() {
+        return client;
     }
 
-    public void setClientDO(ClientDO clientDO) {
-        this.clientDO = clientDO;
+    public void setClient(ClientDO client) {
+        this.client = client;
     }
 
     public Float getLoanSum() {
