@@ -1,4 +1,4 @@
-package io.fourfinanceit.controller;
+package io.fourfinanceit.management;
 
 import io.fourfinanceit.controller.dto.LoanDTO;
 import io.fourfinanceit.controller.dto.LoanRequestDTO;
@@ -7,9 +7,9 @@ import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
-public interface LoanController {
+public interface LoanManagementService {
 
-    List<LoanDTO> getClientLoans(Long clientId);
+    List<LoanDTO> getLoans(Long clientId);
 
     ResponseEntity<LoanResponseDTO> applyForLoan(LoanRequestDTO loanRequest);
 }

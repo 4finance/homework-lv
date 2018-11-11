@@ -11,10 +11,6 @@ public class LoanExtensionDO {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
-    @JoinColumn(name = "LOAN_ID")
-    private LoanDO loan;
-
     @Column(name = "DURATION")
     private Integer duration;
 
@@ -30,14 +26,6 @@ public class LoanExtensionDO {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public LoanDO getLoan() {
-        return loan;
-    }
-
-    public void setLoan(LoanDO loan) {
-        this.loan = loan;
     }
 
     public Integer getDuration() {

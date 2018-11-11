@@ -3,6 +3,7 @@ package io.fourfinanceit.service.impl;
 import io.fourfinanceit.domain.ClientDO;
 import io.fourfinanceit.domain.LoanDO;
 import io.fourfinanceit.repository.LoanRepository;
+import io.fourfinanceit.repository.LoanRequestRepository;
 import io.fourfinanceit.service.LoanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

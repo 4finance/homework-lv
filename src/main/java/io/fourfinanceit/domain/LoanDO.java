@@ -15,6 +15,10 @@ public class LoanDO {
     @JoinColumn(name = "CLIENT_ID")
     private ClientDO client;
 
+    @OneToOne
+    @JoinColumn(name = "EXTENSION_ID")
+    private LoanExtensionDO loanExtension;
+
     @Column(name = "LOAN_SUM")
     private Float loanSum;
 
@@ -44,6 +48,14 @@ public class LoanDO {
 
     public void setClient(ClientDO client) {
         this.client = client;
+    }
+
+    public LoanExtensionDO getLoanExtension() {
+        return loanExtension;
+    }
+
+    public void setLoanExtension(LoanExtensionDO loanExtension) {
+        this.loanExtension = loanExtension;
     }
 
     public Float getLoanSum() {
