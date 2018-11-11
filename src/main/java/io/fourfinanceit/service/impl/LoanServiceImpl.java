@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -25,7 +26,7 @@ public class LoanServiceImpl implements LoanService {
 
     @Override
     public List<LoanDO> getLoans(final Long clientId) {
-        return loanRepository.findByClient(new ClientDO(clientId));
+        return Collections.unmodifiableList(loanRepository.findByClient(new ClientDO(clientId)));
     }
 
     @Override

@@ -3,19 +3,15 @@ package io.fourfinanceit.controller.dto;
 import java.io.Serializable;
 import java.util.Date;
 
-public class LoanDTO implements Serializable {
+public class LoanExtensionDTO implements Serializable {
 
     private Long id;
 
-    private Float loanSum;
+    private Integer duration;
 
     private Float interestRate;
 
     private Date created;
-
-    private Integer duration;
-
-    private LoanExtensionDTO loanExtension;
 
     public Long getId() {
         return id;
@@ -25,12 +21,12 @@ public class LoanDTO implements Serializable {
         this.id = id;
     }
 
-    public Float getLoanSum() {
-        return loanSum;
+    public Integer getDuration() {
+        return duration;
     }
 
-    public void setLoanSum(Float loanSum) {
-        this.loanSum = loanSum;
+    public void setDuration(Integer duration) {
+        this.duration = duration;
     }
 
     public Float getInterestRate() {
@@ -47,21 +43,5 @@ public class LoanDTO implements Serializable {
 
     public void setCreated(Date created) {
         this.created = created;
-    }
-
-    public Integer getDuration() {
-        return duration;
-    }
-
-    public void setDuration(Integer duration) {
-        this.duration = duration;
-    }
-
-    public LoanExtensionDTO getLoanExtension() {
-        return loanExtension;
-    }
-
-    public void setLoanExtension(LoanExtensionDTO loanExtension) {
-        this.loanExtension = loanExtension;
     }
 }
