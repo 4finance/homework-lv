@@ -2,7 +2,7 @@ package io.fourfinanceit.domain;
 
 
 import javax.persistence.*;
-import java.sql.Timestamp;
+import java.util.Date;
 
 @Entity
 @Table(name = "CLIENT")
@@ -21,8 +21,9 @@ public class ClientDO {
     @Column(name = "PERSONALCODE")
     private String personalCode;
 
+    @Temporal(TemporalType.DATE)
     @Column(name = "CREATED")
-    private Timestamp created;
+    private Date created;
 
     public ClientDO() {
     }
@@ -63,11 +64,11 @@ public class ClientDO {
         this.personalCode = personalCode;
     }
 
-    public Timestamp getCreated() {
+    public Date getCreated() {
         return created;
     }
 
-    public void setCreated(Timestamp created) {
+    public void setCreated(Date created) {
         this.created = created;
     }
 }

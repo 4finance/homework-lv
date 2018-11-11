@@ -25,6 +25,7 @@ public class LoanDO {
     @Column(name = "INTEREST_RATE")
     private Float interestRate;
 
+    @Temporal(TemporalType.DATE)
     @Column(name = "CREATED")
     private Date created;
 

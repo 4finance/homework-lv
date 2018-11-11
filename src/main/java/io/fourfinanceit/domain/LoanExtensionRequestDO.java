@@ -22,6 +22,7 @@ public class LoanExtensionRequestDO {
     @Column(name = "IP_ADDRESS")
     private String ipAddress;
 
+    @Temporal(TemporalType.DATE)
     @Column(name = "CREATED")
     private Date created;
 
