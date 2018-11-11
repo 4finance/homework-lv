@@ -4,11 +4,11 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "LOAN_EXTENSION")
+@Table(name = "LOAN_EXTENSION_REQUEST")
 public class LoanExtensionRequestDO {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
@@ -27,6 +27,9 @@ public class LoanExtensionRequestDO {
 
     @Column(name = "DURATION")
     private Integer duration;
+
+    @Column(name = "STATUS")
+    private String status;
 
     public Long getId() {
         return id;
@@ -74,5 +77,13 @@ public class LoanExtensionRequestDO {
 
     public void setDuration(Integer duration) {
         this.duration = duration;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

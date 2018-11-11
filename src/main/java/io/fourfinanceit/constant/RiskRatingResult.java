@@ -1,8 +1,7 @@
-package io.fourfinanceit.management;
+package io.fourfinanceit.constant;
 
 public enum RiskRatingResult {
 
-    OK("OK"),
     HIGH("HIGH"),
     MEDIUM("MEDIUM"),
     LOW("LOW");

@@ -8,7 +8,7 @@ import java.util.Date;
 public class LoanDO {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
@@ -24,9 +24,6 @@ public class LoanDO {
 
     @Column(name = "INTEREST_RATE")
     private Float interestRate;
-
-    @Column(name = "MONTHLY_SUM")
-    private Float monthlySum;
 
     @Column(name = "CREATED")
     private Date created;
@@ -72,14 +69,6 @@ public class LoanDO {
 
     public void setInterestRate(Float interestRate) {
         this.interestRate = interestRate;
-    }
-
-    public Float getMonthlySum() {
-        return monthlySum;
-    }
-
-    public void setMonthlySum(Float monthlySum) {
-        this.monthlySum = monthlySum;
     }
 
     public Date getCreated() {

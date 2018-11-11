@@ -8,7 +8,7 @@ import java.util.Date;
 public class LoanRequestDO {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
@@ -26,6 +26,9 @@ public class LoanRequestDO {
 
     @Column(name = "DURATION")
     private Integer duration;
+
+    @Column(name = "STATUS")
+    private String status;
 
     public Long getId() {
         return id;
@@ -73,5 +76,13 @@ public class LoanRequestDO {
 
     public void setDuration(Integer duration) {
         this.duration = duration;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

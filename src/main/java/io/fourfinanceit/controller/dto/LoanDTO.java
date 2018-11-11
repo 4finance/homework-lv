@@ -5,15 +5,13 @@ import io.fourfinanceit.domain.LoanExtensionDO;
 import java.io.Serializable;
 import java.util.Date;
 
-public class LoanDTO implements Serializable{
+public class LoanDTO implements Serializable {
 
     private Long id;
 
     private Float loanSum;
 
     private Float interestRate;
-
-    private Float monthlySum;
 
     private Date created;
 
@@ -43,14 +41,6 @@ public class LoanDTO implements Serializable{
 
     public void setInterestRate(Float interestRate) {
         this.interestRate = interestRate;
-    }
-
-    public Float getMonthlySum() {
-        return monthlySum;
-    }
-
-    public void setMonthlySum(Float monthlySum) {
-        this.monthlySum = monthlySum;
     }
 
     public Date getCreated() {
